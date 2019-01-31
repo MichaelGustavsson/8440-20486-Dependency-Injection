@@ -66,3 +66,6 @@ public CoursesController(ICourseRepository courseRepo, IInstructorRepository ins
     _instructorRepo = instructorRepo;
 }
 ```
+So, if we take a look at the code above. We see that nowhere are we instantiating the *repository* classes ourselfs. We get the instances when we need them. That is the beauty of *Dependency Injection*, we just ask for what we need when we need it.
+
+What we just have done is created a *loosely coupled* controller. Which means that we have a controller that is not hardwired to the classes CourseRepository and InstructorRepository.
